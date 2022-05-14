@@ -1,12 +1,15 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -14,18 +17,65 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GeneratedTests extends TestBase {
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
-    @DisplayName("MyTest")
+    @DisplayName("Проверка стоимости на главной странице")
     void generatedTest() {
-        step("open \"https://liveinclean.ru/\"", () -> {
-            step("// todo: just add selenium action");
+        step("Открыть главную страницу", () -> {
+            Selenide.open("https://liveinclean.ru/");
         });
 
-        step("шаг 1", () -> {
-            step("// todo: just add selenium action");
+        step("Выбрать город", () -> {
+            $("div.city-select.selected-city", 1).click();
+            $("#find-city").setValue("Москва");
+            $("li.ui-menu-item").click();
+
         });
 
-        step("шаг 2", () -> {
-            step("// todo: just add selenium action");
+        step("Проверить стоимость уборки для выбранного города", () -> {
+            $("div.city-select.selected-city", 1).shouldHave(text("Москва"));
+            $("div.form-cost__value > span.form-cost__sum").shouldHave(text("490"));
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка страницы 'Сотрудничество'")
+    void forPerformersTest() {
+        step("Открыть главную страницу", () -> {
+            Selenide.open("https://liveinclean.ru/");
+        });
+
+        step("Нажать кнопку 'Исполнителям'", () -> {
+            $(By.linkText("Исполнителям")).click();
+        });
+
+        step("Проверка контента страницы 'Сотрудничество'", () -> {
+            $("div.header-desc.heading-performers").shouldHave(text("Сотрудничество с нами!"));
+            $("h2.employment__heading.heading-performers").shouldHave(text("Регистрация в сервисе"));
+        });
+    }
+
+    @Test
+    @DisplayName("Негативный тест авторизации")
+    void negativeAuthTest() {
+        step("Открыть главную страницу", () -> {
+            Selenide.open("https://liveinclean.ru/");
+        });
+
+        step("Перейти на страницу авторизации", () -> {
+            $("a.menu-item_login", 1).click();
+        });
+
+        step("Ввести несуществующую пару логин/пароль", () -> {
+            $("input[name=phone]").setValue("1234567890");
+            $("input[name=password]").setValue("1234567890");
+        });
+
+        step("Нажать кнопку 'Войти'", () -> {
+            $(".button.button-main").$("span").click();
+        });
+
+        step("Проверка подсказки о неверной паре логин/пароль", () -> {
+            $("div.form__notice.form__notice_error:nth-child(4)").shouldHave(
+                    text("Введен неверный номер телефона или пароль"));
         });
     }
 
@@ -34,7 +84,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://liveinclean.ru/'", () ->
-            open("https://liveinclean.ru/"));
+                open("https://liveinclean.ru/"));
 
         step("Page title should have text 'Мобильный клининг уборки квартир, низкие цены | LIVEINCLEAN - уборка - это доступно'", () -> {
             String expectedTitle = "Мобильный клининг уборки квартир, низкие цены | LIVEINCLEAN - уборка - это доступно";
@@ -49,7 +99,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://liveinclean.ru/'", () ->
-            open("https://liveinclean.ru/"));
+                open("https://liveinclean.ru/"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
