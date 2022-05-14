@@ -50,8 +50,13 @@ gradle clean test
 ```
 clean
 test
--Dremote=${REMOTE}
 -Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserMobileView="${BROWSER_MOBILE}"
+-DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
 ```
 
 ## :open_book: Allure отчет
@@ -77,11 +82,11 @@ test
 
 ## :robot: Отчет в Telegram
 <p align="center">
-<img title="Telegram notification message" src="images/screenshots/telegram-bot.png">
+<img title="Telegram notification message" src="images/screenshots/Screenshot_5.png">
 </p>
 
 ## :film_projector: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/gif/test-run.gif">
+  <img title="Selenoid Video" src="images/screenshots/e6bfd1a5ec0643a6.mp4">
 </p>
