@@ -35,9 +35,9 @@
 - Проверка отсутствия ошибок в консоли бразуера
 
 ## :electric_plug: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/irinaleonteva_qaguru_11_13_jenkins/">Сборка в Jenkins</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-978/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/screenshots/jenkins-dashboard.png">
+<img title="Jenkins Dashboard" src="images/screenshots/111.png">
 </p>  
 
 ## :arrow_forward: Запуск из терминала
@@ -62,12 +62,12 @@ test
 ## :open_book: Allure отчет
 - ### Главный экран отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/allure-main-page.png">
+<img title="Allure Overview Dashboard" src="images/screenshots/4321.png">
 </p>
 
 - ### Страница с проведенными тестами
 <p align="center">
-<img title="Allure Test Page" src="images/screenshots/allure-test-page.png">
+<img title="Allure Test Page" src="images/screenshots/1234.png">
 </p>
 
 ## :hammer: Allure Test Ops отчет
@@ -88,5 +88,5 @@ test
 ## :film_projector: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/screenshots/e6bfd1a5ec0643a6.mp4">
+  <img title="Selenoid Video" src="images/screenshots/e6bfd1a5ec0643a6.gif">
 </p>
