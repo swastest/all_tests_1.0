@@ -58,6 +58,8 @@ test
 -DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
 -Dthreads=${THREADS}
 ```
+Попробуйте - это очень удобно!
+${BROWSER}
 
 ## :open_book: Allure отчет
 - ### Главный экран отчета
@@ -72,12 +74,12 @@ test
 
 ## :hammer: Allure Test Ops отчет
 <p align="center">
-<img title="Allure Test Ops Launch" src="images/screenshots/allure-test-ops-page.png">
+<img title="Allure Test Ops Launch" src="images/screenshots/2222.png">
 </p>
 
 ## :wrench: Интеграция с Jira
 <p align="center">
-<img title="Jira Issue Dashboard" src="images/screenshots/jira-issue-page.png">
+<img title="Jira Issue Dashboard" src="images/screenshots/jira.png">
 </p>
 
 ## :robot: Отчет в Telegram
