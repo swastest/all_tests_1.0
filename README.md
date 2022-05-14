@@ -82,7 +82,7 @@ test
 
 ## :robot: Отчет в Telegram
 <p align="center">
-<img title="Telegram notification message" src="images/screenshots/Screenshot_5.png">
+<img title="Telegram notification message" src="images/screenshots/Screenshot_2.png">
 </p>
 
 ## :film_projector: Видео примеры прохождения тестов
