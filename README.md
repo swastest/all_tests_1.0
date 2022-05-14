@@ -45,6 +45,8 @@
 ```
 gradle clean test
 ```
+## :electric_plug: Запуск тестов с выбором параметров 
+<img title="Jenkins ParamStart" src="images/screenshots/param.png">
 
 Удаленный запуск:
 ```
