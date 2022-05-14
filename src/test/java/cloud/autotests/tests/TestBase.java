@@ -37,3 +37,20 @@ public class TestBase {
         }
     }
 }
+
+/*
+        Github repository created: github.com/autotests-cloud/AUTO-978
+        Autotests code generated: github.com/.../tests/GeneratedTests.java
+        Code stack: Java, Gradle, JUnit5, AssertJ, Owner, Rest-Assured, Selenide, Allure
+
+        Jenkins job created: jenkins.autotests.cloud/job/AUTO-978
+        Jenkins job launched, autotests are running (~1 min): /1/console
+        Infrastructure stack: Github, Jenkins, Docker, Selenoid
+        Jenkins job finished: /1/allure
+        Report available with test details, screenshots, logs, videos
+
+
+        What's next?
+        Congratulations! Now you have a ready test automation project: // todo FAQ
+        QA.GURU engineers can automate your tests (Web, Android, iOS, API).
+        Discuss details and payment: t.me/autotests_cloud/1328?comment=3167 👈 */
