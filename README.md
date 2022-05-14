@@ -56,10 +56,21 @@ test
 -DbrowserMobileView="${BROWSER_MOBILE}"
 -DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
 -DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
 ```
-Попробуйте - это очень удобно!
-${BROWSER}
+:monocle_face: Попробуйте - это очень удобно!
+- -Dbrowser - можно выбрать браузер, который необходимо открыть именно вам 
+(chrome,
+  opera,
+  firefox,
+  safari)
+- -DbrowserVersion - выберете нужную версию браузера
+- -DbrowserSize - возможность упралять разрешением (1920x1080,
+  1366x768,
+  1280x1024,
+  1280x800,
+  1024x768)
+- -DbrowserMobileView - возможность проверить свой продукт на мобильном устройстве (браузере)
+- -DremoteDriverUrl - попробуйте выбрать свой аеро куб :)
 
 ## :open_book: Allure отчет
 - ### Главный экран отчета
