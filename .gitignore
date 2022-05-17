@@ -39,3 +39,6 @@ target/
 /gradlew.bat
 .todo
 *.properties
+/src/test/java/cloud/autotests/tests/demowebshop/
+/src/test/java/cloud/autotests/config/demowebshop/
+/src/test/resources/
