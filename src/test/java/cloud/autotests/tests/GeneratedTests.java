@@ -63,7 +63,7 @@ public class GeneratedTests extends TestBase {
         String login = loginConfig.userLogin();
         String password = loginConfig.userPassword();
         step("Открыть главную страницу", () -> {
-            Selenide.open("https://liveinclean.ru/");
+            Selenide.open(loginConfig.baseUrl());
         });
 
         step("Перейти на страницу авторизации", () -> {
